@@ -9,16 +9,17 @@ in the development environment.
 ## Usage
 The following directory structure is assumed throughout this document:
 
-    makefile
-    src/
-    	main.js
-    lib/
-    	yoc-js/
-    	require.js
+	lib/
+ 		yoc-js/
+ 			all.js
+ 			controllers/
+ 			views/
+			...
+		require.js
+	makefile
+	src/
+		main.js
+		main.css
+		main.html
 
- recommend adding `yoc-js` as a Git submodule to your project,
-possibly to the `lib` directory.
 
-Say you're programming a rich-media ad for
-[Acme](en.wikipedia.org/wiki/Acme_Corporation). 
-We recommend having a `main.js` file som
