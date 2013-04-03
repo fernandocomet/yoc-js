@@ -8,6 +8,7 @@ in the development environment.
 
 ## Usage
 The following directory structure is assumed throughout this document:
+
     makefile
     src/
     	main.js
