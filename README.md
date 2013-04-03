@@ -11,9 +11,10 @@ The following directory structure is assumed throughout this document:
 
 	lib/
  		yoc-js/
- 			all.js
- 			controllers/
- 			views/
+ 			controller.js
+ 			controller/
+ 			view.js
+ 			view/
 			...
 		require.js
 	makefile
