@@ -1,4 +1,4 @@
-# yoc-js: A Lightweight Javascript Framework for Mobile, Rich-Media Ads
+# yoc-js: A Lightweight Javascript Framework for WebKit Rich-Media Ads
 
 ## Features
 1. No extermal dependencies, except [requirejs](http://requirejs.org/) 
@@ -22,5 +22,3 @@ The following directory structure is assumed throughout this document:
 		main.js
 		main.css
 		main.html
-
-
