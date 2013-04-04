@@ -1,3 +1,6 @@
+/*jslint browser: true*/
+/*global YOC*/
+
 YOC.draggableView = function (spec, my) {
   var that = YOC.view(spec, my),
     touchmove = function (event) {

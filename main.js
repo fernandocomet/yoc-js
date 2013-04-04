@@ -1,3 +1,8 @@
+/*jslint browser: true*/
+/*global _gaq*/
+
+var YOC = {};
+
 YOC.view = function (spec, my) {
   'use strict';
 
@@ -5,6 +10,7 @@ YOC.view = function (spec, my) {
     el = document.getElementById(spec.id),
     subviews = [],
     delegate = spec.delegate,
+
     set_hidden = function (should_hide) {
       if (should_hide) {
         el.style.display = 'none';
@@ -12,6 +18,7 @@ YOC.view = function (spec, my) {
         el.style.display = 'block';
       }
     },
+
     set_transparent = function (should_be_transparent) {
       if (should_be_transparent) {
         el.style.opacity = 0;
@@ -19,6 +26,7 @@ YOC.view = function (spec, my) {
         el.style.opacity = 1;
       }
     },
+
     add_subview = function (view) {
       subviews.push(view);
     },
@@ -67,6 +75,33 @@ YOC.view = function (spec, my) {
 
   el.addEventListener('click', that.click);
   el.addEventListener('touchstart', that.touchstart);
+
+  return that;
+};
+
+YOC.viewController = function (spec, my) {
+  'use strict';
+
+  var that = {},
+    outlets = {},
+
+    add_outlet = function (spec) {
+      outlets[spec.name] = spec.dest;
+    },
+
+    get_outlet = function (name) {
+      return outlets[name];
+    },
+
+    track = function (category, action, opt_label, opt_value, opt_noninteraction) {
+      _gaq.push(['_trackEvent', category, action, opt_label, opt_value, opt_noninteraction]);
+    };
+
+  my = my || {};
+
+  that.add_outlet = add_outlet;
+  that.get_outlet = get_outlet;
+  that.track = track;
 
   return that;
 };

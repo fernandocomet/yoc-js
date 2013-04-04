@@ -1,4 +1,7 @@
-YOC.movieView = function (spec, my) {
+/*jslint browser: true*/
+/*global YOC*/
+
+YOC.slideshowView = function (spec, my) {
   'use strict';
 
   var that = YOC.view(spec, my),
